@@ -36,3 +36,18 @@ redClear.addEventListener("click", function () {
 });
 
 document.body.append(redButton, blueButton, clearButton, redClear);
+
+const input = document.createElement("input");
+input.placeholder = "Enter a task";
+
+const addBtn = document.createElement("button");
+addBtn.innerText = "ADD TASK";
+
+document.body.append(input, addBtn);
+
+addBtn.addEventListener("click", function(){
+const paragraph = document.createElement("p");
+paragraph.innerText = input.value;
+input.value = "";
+document.body.appendChild(paragraph);
+})
