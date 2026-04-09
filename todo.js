@@ -1,6 +1,7 @@
 class todoManager {
   constructor() {
     this.allTasks = [];
+    this.allTasks = JSON.parse(localStorage.getItem('myTasks')) || [];
   }
 
   createTask(title, notes, focus){
@@ -13,6 +14,7 @@ class todoManager {
     this.allTasks.push(newEntry);
 
     console.log("current tasks:", this.allTasks);
+    localStorage.setItem('myTasks', JSON.stringify(this.allTasks));
   }
 }
 
