@@ -3,7 +3,7 @@ class todoManager {
     this.allTasks = [];
     this.allTasks = JSON.parse(localStorage.getItem('myTasks')) || [];
   }
-
+//task info
   createTask(title, notes, focus){
     const newEntry = {
       title: title, 
